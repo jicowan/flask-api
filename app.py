@@ -1,12 +1,13 @@
 from flask import Flask, jsonify, request
 import redis
+import os
 
 app = Flask(__name__)
 
 @app.route('/todo', methods=['GET'])
 
 def get_query():
-    r = redis.StrictRedis(host=redis-master, port=6379, db=0, password=$REDIS_PASSWORD)
+    r = redis.StrictRedis(host=redis-master, port=6379, db=0, password=os.getenv('REDIS_PASSWORD'))
     count = 50
     results = []
     grab = 42
