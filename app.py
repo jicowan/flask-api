@@ -9,7 +9,7 @@ CORS(app)
 @app.route('/todo', methods=['GET'])
 
 def get_query():
-    r = redis.StrictRedis(host=redis-master, port=6379, db=0, password=os.getenv('REDIS_PASSWORD'))
+    r = redis.StrictRedis(host=redis-master, port=6379, db=0)
     count = 50
     results = []
     grab = 42
